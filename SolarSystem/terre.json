@@ -1,10 +1,19 @@
 {
+  "id" : "2",
+  "typePlanete" : "Planete",
+  "nom" : "Terre",
   "position":
   {
     "x" : 147e6,
     "y" : 0.0
-  }
-
-
-
+  },
+  "taille": 6371,
+  "masse": 5.972e24,
+  "distancesoleil": 149.6,
+  "temperature" : 15,
+  "tempsRevolution": 365,
+  "degreRevolution" : 0,
+  "composition": "",
+  "pourcentageRevolution": 0,
+  "orbiteAutour": 1
 }

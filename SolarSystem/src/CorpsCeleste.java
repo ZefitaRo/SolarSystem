@@ -12,8 +12,6 @@ public class CorpsCeleste
 
     protected int taille;
 
-    protected int age;
-
     protected int masse;
 
     protected int distanceDuSoleil;
@@ -30,14 +28,13 @@ public class CorpsCeleste
 
     protected int orbiteAutour;
 
-    public CorpsCeleste(int id, String nom, int taille, int age, int masse, int distanceDuSoleil, int tempsRevolution,
+    public CorpsCeleste(int id, String nom, int taille, int masse, int distanceDuSoleil, int tempsRevolution,
                         int temperature, String composition, Position position, double degreRevolution,
                         int orbiteAutour)
     {
         this.id = id;
         this.nom = nom;
         this.taille = taille;
-        this.age = age;
         this.masse = masse;
         this.distanceDuSoleil = distanceDuSoleil;
         this.tempsRevolution = tempsRevolution;
@@ -68,21 +65,12 @@ public class CorpsCeleste
         this.nom = nom;
     }
 
-    public int getTaille() {
-        return taille;
-    }
 
     public void setTaille(int taille) {
         this.taille = taille;
     }
 
-    public int getAge() {
-        return age;
-    }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     public int getMasse() {
         return masse;
@@ -147,4 +135,19 @@ public class CorpsCeleste
     public void setOrbiteAutour(int orbiteAutour) {
         this.orbiteAutour = orbiteAutour;
     }
+
+    public double calculerDistance(Position b)
+    {
+        double distance = Math.sqrt(Math.pow((b.getX() - position.getX()), 2) + Math.pow((b.getY() - position.getY()),
+                2));
+        return distance;
+    }
+
+    public double calculerDistParcourue(int nbrJour)
+    {
+         this.degreRevolution = (double)(nbrJour * 360) / this.tempsRevolution;
+         return degreRevolution;
+    }
+
+
 }

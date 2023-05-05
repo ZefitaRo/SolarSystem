@@ -21,8 +21,8 @@ public class FCorpsCeleste
         switch (type) {
             case ETOILE -> {
                 String typeEtoile = o.getString("typeEtoile");
-                return new Etoile(id, nom, taille, masse, distanceSoleil, tempsRevolution,
-                        temperature,distanceSoleil ,composition, position, degreRevolution, orbiteAutour);
+                return new Etoile(id,  nom,  taille, masse,  distanceSoleil,  tempsRevolution,  temperature,
+                 composition,  position,  degreRevolution,  orbiteAutour);
             }
 
             case PLANETE -> {
